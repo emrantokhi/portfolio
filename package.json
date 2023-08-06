@@ -1,5 +1,6 @@
 {
-  "homepage": "emrantokhi.github.io",
+  "name": "Portfolio",
+  "homepage": "https://emrantokhi.github.io/emrantokhi.github.io",
   "private": true,
   "scripts": {
     "dev": "next dev",
