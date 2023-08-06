@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Emran Tokhi</title>
+        <link rel="icon" href="/icon.ico" />
       </Head>
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <Link href="/unreal5/capybaracrush">Next.js!</Link>
+          Welcome to <Link href="/unreal5/capybaracrush">PortY</Link>
         </h1>
 
         <p className={styles.description}>
