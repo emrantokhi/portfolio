@@ -60,7 +60,7 @@ export default function NavTabs(props) {
     };
 
     return (
-        <AntTabs value={value} scrollable='auto' variant='scrollable' onLoad={() => setValue(-2)} onChange={handleChange} onMouseLeave={() => setValue(-2)}>
+        <AntTabs value={value} allowScrollButtonsMobile scrollable='auto' variant='scrollable' onLoad={() => setValue(-2)} onChange={handleChange} onMouseLeave={() => setValue(-2)}>
             <AntTab icon={<HomeRoundedIcon />} value={-1} href="/" component={Link} />
             <AntTab label="Learning Academy LMS"  href="/unreal5/capybaracrush" component={Link} />
             <AntTab label="Unreal Engine 5"  />
