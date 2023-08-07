@@ -8,7 +8,6 @@ import Button from '@mui/material/Button';
 import Link from 'next/link'; import MainPage from '/pages/index.js'
 import CapybaraCrushPage from '/pages/unreal5/capybaracrush.js'
 import ReactDOM from 'react-dom';
-import Routes from '/pages/routes';
 
 const AntTabs = styled(Tabs)({
     borderBottom: '0px solid #e8e8e8',

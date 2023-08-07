@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import NavBar from '/components/navbar.js'
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
