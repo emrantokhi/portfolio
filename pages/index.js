@@ -1,6 +1,27 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import HeadShot from '/public/headshot.webp'
+
+var classes = {
+    logo: {
+        margin: 'auto',
+        textAlign: 'center',
+        maxWidth: '50%',
+        maxHeight: '70%',
+    }
+};
+
+const LogoComponent = () => (
+    <Image
+        src={HeadShot}
+        height={518}
+        width={460}
+        alt="Logo"
+        className={classes.logo}
+    />
+);
 
 export default function Home() {
     return (
@@ -9,42 +30,45 @@ export default function Home() {
                 <title>Emran Tokhi</title>
             </Head>
             <main>
+                <p></p>
+                <p></p>
+                <h3><p className={styles.description}>
+                    Feel free to click on any page to see more information about each project!
+                    <br />Currently Working on: <Link href="/">Capybara Crush</Link>
+                </p></h3>
                 <h1 className={styles.title}>
-                    Welcome to <Link href="/unreal5/capybaracrush">PortY</Link>
+                    <p></p>
+                    <LogoComponent />
                 </h1>
 
-                <p className={styles.description}>
-                    Get started by editing <code>pages/index.js</code>
-                </p>
-
                 <div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h3>Documentation &rarr;</h3>
-                        <p>Find in-depth information about Next.js features and API.</p>
-                    </a>
-
-                    <a href="https://nextjs.org/learn" className={styles.card}>
-                        <h3>Learn &rarr;</h3>
-                        <p>Learn about Next.js in an interactive course with quizzes!</p>
-                    </a>
-
-                    <a
-                        href="https://github.com/vercel/next.js/tree/master/examples"
-                        className={styles.card}
-                    >
-                        <h3>Examples &rarr;</h3>
-                        <p>Discover and deploy boilerplate example Next.js projects.</p>
-                    </a>
-
-                    <a
-                        href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        className={styles.card}
-                    >
-                        <h3>Deploy &rarr;</h3>
-                        <p>
-                            Instantly deploy your Next.js site to a public URL with Vercel.
+                    <div className={styles.card}>
+                        <h3><center>About Me</center></h3>
+                        <p>Lives in Sacramento, California
+                            <br /><br />Hobbies: Building/Helping build PCs for friends, gaming, collecting Yu-Gi-Oh! Cards, watching all kinds of movies and shows (including but not limited to the superhero genre)
+                            <br /><br />Bilingual in English and Pashto!
+                            <br />Top 5 games (not in any order): Final Fantasy 7 Remake, Deus Ex: Human Revolution, Yakuza 0, The Outer Worlds, Ghost of Tsushima
                         </p>
-                    </a>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h3><center>Education</center></h3>
+                        <p>2017-2021 California State University - Sacramento.
+                           <br />Bachelor of Science in Computer Science, Cum Laude
+                           <br /><br />Languages: C++, Java, C.
+                           <br /><br />IDE: Visual Studio Code, Visual Studio, Eclipse, Notepad++
+                           <br /><br />Soft Skills: Great Teamwork Skills, Great Communicator, Leader, Problem Solver, Adaptive, Can Take Criticism and turn that into a way to become better, Quick Learner, Critical Thinker, Accountable
+                        </p>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h3><center>Interests</center></h3>
+                        <p>I have a deep interest in Video Game development, and believe that I would be a great fit in any team that would have me. I strive to continue my learning journey, and want to help create new ways of looking at the world through video games.
+                            <br /><br />I feel that I work very well on a team, and I try to make sure that I stay on top of my work especially when working with a team. I am able to work alone efficiently as well, and can learn new things quickly if necessary.
+                            <br /><br />GitHub: <a href="https://github.com/emrantokhi">https://github.com/emrantokhi</a>
+                        </p>
+                    </div>
+
                 </div>
             </main>
 
@@ -70,7 +94,7 @@ export default function Home() {
         }
         footer {
           width: 100%;
-          height: 100px;
+          height: 25px;
           border-top: 1px solid #eaeaea;
           display: flex;
           justify-content: center;

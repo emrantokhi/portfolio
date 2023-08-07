@@ -2,12 +2,10 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Link from 'next/link'; import MainPage from '/pages/index.js'
-import CapybaraCrushPage from '/pages/unreal5/capybaracrush.js'
-import ReactDOM from 'react-dom';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 const AntTabs = styled(Tabs)({
     minWidth: 0,
@@ -55,6 +53,17 @@ const AntTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
 export default function NavTabs(props) {
     const [value, setValue] = React.useState(0);
 
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -63,8 +72,16 @@ export default function NavTabs(props) {
         <AntTabs value={value} overscroll-behavior-x="auto" allowScrollButtonsMobile scrollable='on' variant='scrollable' onLoad={() => setValue(-2)} onChange={handleChange} onMouseLeave={() => setValue(-2)}>
             <AntTab icon={<HomeRoundedIcon />} value={-1} href="/" component={Link} />
             <AntTab label="Learning Academy LMS"  href="/unreal5/capybaracrush" component={Link} />
-            <AntTab label="Unreal Engine 5"  />
-            <AntTab label="Unreal Engine 4"  />
+
+            <AntTab label="Unreal Engine 5" aria-controls={open ? 'basic-menu' : undefined} aria-haspopup="true" aria-expanded={open ? 'true' : undefined} onClick={handleClick}>
+                <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+                    <MenuItem onClick={handleClose}>Tester</MenuItem>
+                </Menu>
+            </AntTab>
+
+
+
+            <AntTab label="Unreal Engine 4" />
             <AntTab label="C++ CLI" />
             <AntTab label="OpenGL" />
             <AntTab label="RAGE (CSUS)" />

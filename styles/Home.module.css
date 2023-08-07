@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #1c1c1c;
 }
 
 .title a {
@@ -35,17 +36,18 @@
 
 
 .description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+    color: #ffffff;
+    line-height: 1.5;
+    font-size: 1.5rem;
 }
 
 .grid {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
 
-  max-width: 800px;
+  max-width: 1024px;
   margin-top: 3rem;
 }
 
@@ -71,12 +73,14 @@
 .card h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .card p {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+  color: #ffffff;
 }
 
 .logo {
