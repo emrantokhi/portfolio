@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import styles from '../styles/Home.module.css';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Link from 'next/link'; import MainPage from '/pages/index.js'
+import Link from 'next/link';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import Dropdown from '@mui/base/Dropdown';
+import Menu from '@mui/base/Menu';
+import MenuItem from '@mui/base/MenuItem';
+import Box from '@mui/material/Box';
+import Popper from '@mui/material/Popper';
 
 const AntTabs = styled(Tabs)({
     minWidth: 50,
@@ -26,7 +28,6 @@ const AntTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
         minWidth: 50,
     },
     fontWeight: theme.typography.fontWeightRegular,
-    
     color: '#ffffff',
     fontFamily: [
         '-apple-system',
@@ -56,19 +57,20 @@ const AntTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
 export default function NavTabs(props) {
     const [value, setValue] = React.useState(0);
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-
     const handleChange = (event, newValue) => {
         setValue(newValue);
+    };
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(anchorEl ? null : event.currentTarget);
+    };
+    const id = open ? 'simple-popper' : undefined;
+
+    const leavingMouseFunc = () => {
+        setValue(-2);
+        handleClick;
     };
 
     return (
@@ -81,19 +83,23 @@ export default function NavTabs(props) {
             variant='scrollable'
             onLoad={() => setValue(-2)}
             onChange={handleChange}
-            onMouseLeave={() => setValue(-2)}
+            onMouseLeave={leavingMouseFunc}
+            onMouseOut={leavingMouseFunc }
         >
             <AntTab disabled label="" value={-1} />
             <AntTab icon={<HomeRoundedIcon />} href="/" component={Link} />
-            <AntTab label="Learning Academy LMS"  href="/unreal5/capybaracrush" component={Link} />
+            <AntTab label="Learning Academy LMS"  href="/lms" component={Link} />
 
-            <AntTab label="Unreal Engine 5" aria-controls={open ? 'basic-menu' : undefined} aria-haspopup="true" aria-expanded={open ? 'true' : undefined} onClick={handleClick}>
-                <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-                    <MenuItem onClick={handleClose}>Tester</MenuItem>
-                </Menu>
-            </AntTab>
+
+            <AntTab label="Unreal Engine 5" onMouseEnter={handleClick}></AntTab>
+            <Popper id={id} open={open} anchorEl={anchorEl}>
+                <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }} onMouseLeave={handleClick}>
+                    The content of the Popper.
+                </Box>
+            </Popper>
 
             <AntTab label="Unreal Engine 4" />
+
             <AntTab label="C++ CLI" />
             <AntTab label="OpenGL" />
             <AntTab label="RAGE (CSUS)" />

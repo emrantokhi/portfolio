@@ -16,8 +16,8 @@ var classes = {
     logo: {
         margin: 'auto',
         textAlign: 'center',
-        maxWidth: '50%',
-        maxHeight: '70%',
+        width: "100%",
+        height: "unset"
     },
     logoHorizontallyCenter: {
         position: "absolute",
@@ -43,6 +43,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     // Override media queries injected by theme.mixins.toolbar
     '@media all': {
         minHeight: 100,
+        maxHeight: 100
     },
 }));
 
