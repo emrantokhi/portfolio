@@ -2,7 +2,6 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Link from 'next/link'; import MainPage from '/pages/index.js'
@@ -11,7 +10,7 @@ import ReactDOM from 'react-dom';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 
 const AntTabs = styled(Tabs)({
-    display: "flex",
+    minWidth: 50,
     borderBottom: '0px solid #e8e8e8',
     '& .MuiTabs-indicator': {
         backgroundColor: '#ffffff',
@@ -21,9 +20,9 @@ const AntTabs = styled(Tabs)({
 //had disableripple right of tab
 const AntTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
     textTransform: 'none',
-    minWidth: 10,
+    minWidth: 50,
     [theme.breakpoints.up('sm')]: {
-        minWidth: 0,
+        minWidth: 50,
     },
     fontWeight: theme.typography.fontWeightRegular,
     marginRight: theme.spacing(1),
