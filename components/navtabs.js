@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 
 const AntTabs = styled(Tabs)({
-    minWidth: 50,
+    minWidth: 0,
     borderBottom: '0px solid #e8e8e8',
     '& .MuiTabs-indicator': {
         backgroundColor: '#ffffff',
@@ -60,7 +60,7 @@ export default function NavTabs(props) {
     };
 
     return (
-        <AntTabs value={value} allowScrollButtonsMobile scrollable='on' variant='scrollable' onLoad={() => setValue(-2)} onChange={handleChange} onMouseLeave={() => setValue(-2)}>
+        <AntTabs value={value} overscroll-behavior-x="auto" allowScrollButtonsMobile scrollable='on' variant='scrollable' onLoad={() => setValue(-2)} onChange={handleChange} onMouseLeave={() => setValue(-2)}>
             <AntTab icon={<HomeRoundedIcon />} value={-1} href="/" component={Link} />
             <AntTab label="Learning Academy LMS"  href="/unreal5/capybaracrush" component={Link} />
             <AntTab label="Unreal Engine 5"  />
