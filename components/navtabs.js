@@ -20,9 +20,10 @@ const AntTabs = styled(Tabs)({
 //had disableripple right of tab
 const AntTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
     textTransform: 'none',
-    minWidth: 0,
+    minWidth:"0",
+    width: "-50%",
     [theme.breakpoints.up('sm')]: {
-        minWidth: 0,
+        minWidth: "-50%",
     },
     fontWeight: theme.typography.fontWeightRegular,
     marginRight: theme.spacing(1),
