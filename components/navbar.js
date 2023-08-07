@@ -43,6 +43,7 @@ var classes = {
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
     paddingTop: "7%",
+    paddingBottom: "0%",
     backgroundColor: '#1c1c1c',
     // Override media queries injected by theme.mixins.toolbar
     '@media all': {

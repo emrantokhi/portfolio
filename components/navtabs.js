@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import Link from 'next/link'; import MainPage from '/pages/index.js'
 import CapybaraCrushPage from '/pages/unreal5/capybaracrush.js'
 import ReactDOM from 'react-dom';
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 
 const AntTabs = styled(Tabs)({
     borderBottom: '0px solid #e8e8e8',
@@ -15,6 +16,7 @@ const AntTabs = styled(Tabs)({
         backgroundColor: '#ffffff',
     },
 });
+
 //had disableripple right of tab
 const AntTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
     textTransform: 'none',
@@ -58,12 +60,14 @@ export default function NavTabs(props) {
     };
 
     return (
-        <AntTabs value={value} onLoad={() => setValue(-2)} onChange={handleChange} onMouseLeave={() => setValue(-2)}>
-            <AntTab label="Tab 1" value={-1} href="/" component={Link} />
-            <AntTab label="Tab 2"  href="/unreal5/capybaracrush" component={Link} />
-            <AntTab label="Tab 3"  />
-            <AntTab label="Tab 3"  />
-            <AntTab label="Tab 3"  />
+        <AntTabs value={value} scrollable='auto' variant='scrollable' onLoad={() => setValue(-2)} onChange={handleChange} onMouseLeave={() => setValue(-2)}>
+            <AntTab icon={<HomeRoundedIcon />} value={-1} href="/" component={Link} />
+            <AntTab label="Learning Academy LMS"  href="/unreal5/capybaracrush" component={Link} />
+            <AntTab label="Unreal Engine 5"  />
+            <AntTab label="Unreal Engine 4"  />
+            <AntTab label="C++ CLI" />
+            <AntTab label="OpenGL" />
+            <AntTab label="RAGE (CSUS)" />
         </AntTabs>
     );
 }
