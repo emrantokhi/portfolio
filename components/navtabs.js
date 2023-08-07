@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
+import styles from '../styles/Home.module.css';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Link from 'next/link'; import MainPage from '/pages/index.js'
@@ -8,8 +9,10 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 const AntTabs = styled(Tabs)({
-    minWidth: 0,
+    minWidth: 50,
     borderBottom: '0px solid #e8e8e8',
+    paddingLeft: "2%",
+    paddingRight: "9%",
     '& .MuiTabs-indicator': {
         backgroundColor: '#ffffff',
     },
@@ -23,7 +26,7 @@ const AntTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
         minWidth: 50,
     },
     fontWeight: theme.typography.fontWeightRegular,
-    marginRight: theme.spacing(1),
+    
     color: '#ffffff',
     fontFamily: [
         '-apple-system',
@@ -69,8 +72,19 @@ export default function NavTabs(props) {
     };
 
     return (
-        <AntTabs value={value} overscroll-behavior-x="auto" allowScrollButtonsMobile scrollable='on' variant='scrollable' onLoad={() => setValue(-2)} onChange={handleChange} onMouseLeave={() => setValue(-2)}>
-            <AntTab icon={<HomeRoundedIcon />} value={-1} href="/" component={Link} />
+        <AntTabs
+            value={value}
+            orientation="horizontal"
+            overscroll-behavior-x="auto"
+            allowScrollButtonsMobile={true}
+            scrollable='on'
+            variant='scrollable'
+            onLoad={() => setValue(-2)}
+            onChange={handleChange}
+            onMouseLeave={() => setValue(-2)}
+        >
+            <AntTab disabled label="" value={-1} />
+            <AntTab icon={<HomeRoundedIcon />} href="/" component={Link} />
             <AntTab label="Learning Academy LMS"  href="/unreal5/capybaracrush" component={Link} />
 
             <AntTab label="Unreal Engine 5" aria-controls={open ? 'basic-menu' : undefined} aria-haspopup="true" aria-expanded={open ? 'true' : undefined} onClick={handleClick}>
@@ -79,12 +93,10 @@ export default function NavTabs(props) {
                 </Menu>
             </AntTab>
 
-
-
             <AntTab label="Unreal Engine 4" />
             <AntTab label="C++ CLI" />
             <AntTab label="OpenGL" />
             <AntTab label="RAGE (CSUS)" />
-        </AntTabs>
+            </AntTabs>
     );
 }

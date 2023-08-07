@@ -93,3 +93,7 @@
     flex-direction: column;
   }
 }
+
+.MuiTabs {
+    flex-direction: row;
+}
