@@ -8,7 +8,7 @@ import Head from 'next/head';
 export default function App({ Component, pageProps }) {
     return (
         <>
-            <meta name="viewport" content="width=500, initial-scale=.5, user-scalable=yes" />
+            <meta name="viewport" content="width=500, initial-scale=.87, user-scalable=yes" />
             <Component {...pageProps} />
             <NavBar></NavBar>
             <ScrollToTop smooth color="#6f00ff"></ScrollToTop>
