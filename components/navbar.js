@@ -34,6 +34,7 @@ var classes = {
     },
     tabsCenter: {
         position: "absolute",
+        display: "flex",
         left: "50%",
         top: "70%",
         transform: "translate(-50%, -50%)"
