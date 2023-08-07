@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
             <NavBar></NavBar>
             <ScrollToTop smooth color="#6f00ff"></ScrollToTop>
             <Head>
-                <meta name="viewport" content="minWidth=500, initial-scale=1, user-scalable=no" />
+                <meta name="viewport" content="minWidth=500, initial-scale=1, user-scalable=yes" />
                 <link rel="icon" href="/icon.ico" />
             </Head>
         </>
