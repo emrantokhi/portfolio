@@ -40,6 +40,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     paddingTop: "7%",
     paddingBottom: "0%",
     backgroundColor: '#21262d',
+    //#21262d #08202e
     // Override media queries injected by theme.mixins.toolbar
     '@media all': {
         minHeight: 100,

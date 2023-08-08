@@ -13,8 +13,6 @@ export default function Unreal5() {
                 <title>Unreal Engine 5 Projects</title>
             </Head>
             <main>
-                <p></p>
-                <p></p>
                 <Unreal5Tabs></Unreal5Tabs>
             </main>
         </div>

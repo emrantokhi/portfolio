@@ -34,7 +34,7 @@ export default function Home() {
                 <p></p>
                 <h3><p className={styles.description}>
                     Feel free to click on any page to see more information about each project!
-                    <br />Currently Working on: <Link href="/">Capybara Crush</Link>
+                    <br />Currently Working on: <Link href="/unreal5/capybaracrush">Capybara Crush</Link>
                 </p></h3>
                 <h1 className={styles.title}>
                     <p></p>
