@@ -1,11 +1,11 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #151718;
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #131518;
 }
 
 .title a {
@@ -92,8 +92,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
-
-.MuiTabs {
-    flex-direction: row;
 }
