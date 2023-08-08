@@ -66,12 +66,22 @@
 
 .newgrid {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1024px;
+    padding-left: 5px;
     margin-top: 3rem;
     margin-bottom: 3rem;
+}
+
+.sologrid {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 512px;
+    margin-top: 3rem;
 }
 
 .card {
