@@ -1,10 +1,21 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
+import CardMedia from '@mui/material/CardMedia';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Unreal5Tabs from '../components/unreal5tabs.js';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material/styles';
+
+const PaperBG = styled(Paper)(() => ({
+    minWidth: "50px",
+    maxWidth: "1024px",
+    textAlign: 'center',
+    backgroundColor: "#131518",
+    paddingBottom: "5px",
+    flexWrap: "wrap",
+    display: "wrap",
+    borderRadius: "10px",
+}));
 
 export default function Unreal5() {
     return (
@@ -12,8 +23,22 @@ export default function Unreal5() {
             <Head>
                 <title>Unreal Engine 5 Projects</title>
             </Head>
+            <p />
+            <p />
+            <p />
+            <p />
+            <p />
+            <Unreal5Tabs></Unreal5Tabs>
             <main>
-                <Unreal5Tabs></Unreal5Tabs>
+                
+                <div className={styles.newgrid}>
+                    <h3 className={styles.description}>Capybara Crush (Latest Update)</h3>
+                    <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/sj-xW4pRhhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"} sx={{ aspectRatio: "16/9", }} ></CardMedia>
+                    <h3 className={styles.description}>Clean Em' Up Shooter</h3>
+                    <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/du4ClUzqvpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
+                    <h3 className={styles.description}>Crypt Raider</h3>
+                    <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/KnQo0XyA_0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
+                </div>
             </main>
         </div>
     );

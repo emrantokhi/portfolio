@@ -1,13 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Iframe from 'react-iframe'
-import YouTube from 'react-youtube';
 import CardMedia from '@mui/material/CardMedia';
 
 const PaperBG = styled(Paper)(() => ({
@@ -39,11 +34,6 @@ const LooseTextBox = styled(Box)(() => ({
 }));
 
 export default function LMS() {
-/*    const [player, setPlayer] = useState(null);
-    const onReady = (e) => {
-        setPlayer(e.target);
-    };*/
-
     return (
         <div className={styles.container}>
             <Head>
@@ -76,7 +66,7 @@ export default function LMS() {
                 <br />
                 <div className={styles.newgrid}>
                     <Box sx={{flexGrow:1} }>
-                    <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/B-cLbAW6eBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9",}}></CardMedia>
+                        <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/B-cLbAW6eBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9",}}></CardMedia>
                     </Box>
                     <div className={styles.basictext}>
                         <PaperBG elevation={15}>
