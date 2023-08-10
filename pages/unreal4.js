@@ -1,10 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import Unreal4Tabs from '../components/unreal4tabs.js';
+import styles from '../styles/Home.module.css';
+import CardMedia from '@mui/material/CardMedia';
 
 export default function Unreal4() {
     return (
@@ -12,10 +9,27 @@ export default function Unreal4() {
             <Head>
                 <title>Unreal Engine 4 Projects</title>
             </Head>
+            <p />
+            <p />
+            <p />
+            <p />
+            <p />
+            <Unreal4Tabs></Unreal4Tabs>
             <main>
-                <p></p>
-                <p></p>
-                <Unreal4Tabs></Unreal4Tabs>
+
+                <div className={styles.newgrid}>
+                    <div className={styles.maintext}>
+                        <center>
+                            This is a page that shows the current update of all the projects under this section! Feel free to click on the tabs above to see more specific info about the projects!
+                        </center>
+                    </div>
+                    <h3 className={styles.description}>Toon Tanks</h3>
+                    <CardMedia component="iframe" src="https://www.youtube.com/embed/VGjgU8JOm4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"} sx={{ aspectRatio: "16/9", }} ></CardMedia>
+                    <h3 className={styles.description}>Escape Game</h3>
+                    <CardMedia component="iframe" src="https://www.youtube.com/embed/TexDWc22aa0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
+                    <h3 className={styles.description}>Bulls and Cows</h3>
+                    <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/tOWVS4LwDO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
+                </div>
             </main>
         </div>
     );

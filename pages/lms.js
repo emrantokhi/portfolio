@@ -46,7 +46,6 @@ export default function LMS() {
                 <br />
                 <br />
                 <br />
-                <br />
                 <h3 className={styles.description}>Learning Management System</h3>
                 <h1 className={styles.title}>
                     Learning Academy

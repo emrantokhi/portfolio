@@ -2,7 +2,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Unreal5Tabs from '../components/unreal5tabs.js';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 
@@ -32,8 +31,13 @@ export default function Unreal5() {
             <main>
                 
                 <div className={styles.newgrid}>
+                    <div className={styles.maintext}>
+                        <center>
+                            This is a page that shows the current update of all the projects under this section! Feel free to click on the tabs above to see more specific info about the projects!
+                        </center>
+                    </div>
                     <h3 className={styles.description}>Capybara Crush (Latest Update)</h3>
-                    <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/sj-xW4pRhhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"} sx={{ aspectRatio: "16/9", }} ></CardMedia>
+                    <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/sj-xW4pRhhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"}  sx={{ aspectRatio: "16/9", }} ></CardMedia>
                     <h3 className={styles.description}>Clean Em' Up Shooter</h3>
                     <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/du4ClUzqvpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
                     <h3 className={styles.description}>Crypt Raider</h3>
