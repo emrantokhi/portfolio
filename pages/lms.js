@@ -6,8 +6,13 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import Iframe from 'react-iframe'
+import YouTube from 'react-youtube';
+import CardMedia from '@mui/material/CardMedia';
 
 const PaperBG = styled(Paper)(() => ({
+    minWidth: "50px",
+    maxWidth: "1024px",
     textAlign: 'center',
     backgroundColor: "#131518",
     paddingBottom: "5px",
@@ -17,21 +22,28 @@ const PaperBG = styled(Paper)(() => ({
 }));
 
 const TextBox = styled(Box)(() => ({
-    maxWidth: "720px",
-    margin: "auto",
+    minWidth: "50px",
+    maxWidth: "1024px",
+    margin: "0 auto",
     paddingTop: "10px",
     display: "wrap",
     flexWrap: "wrap",
 }));
 
 const LooseTextBox = styled(Box)(() => ({
-    maxWidth: "720px",
+    minWidth: "100px",
+    maxWidth: "1024px",
     paddingTop: "10px",
     display: "wrap",
     flexWrap: "wrap",
 }));
 
 export default function LMS() {
+/*    const [player, setPlayer] = useState(null);
+    const onReady = (e) => {
+        setPlayer(e.target);
+    };*/
+
     return (
         <div className={styles.container}>
             <Head>
@@ -63,7 +75,9 @@ export default function LMS() {
                 <br />
                 <br />
                 <div className={styles.newgrid}>
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/B-cLbAW6eBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
+                    <Box sx={{flexGrow:1} }>
+                    <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/B-cLbAW6eBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9",}}></CardMedia>
+                    </Box>
                     <div className={styles.basictext}>
                         <PaperBG elevation={15}>
                             <h3 className={styles.headerfordescription}><center>My Role on the Team</center></h3>
