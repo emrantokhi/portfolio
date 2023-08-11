@@ -82,8 +82,8 @@ export default function LMS() {
                 </Box>
 
                
-                    
-                <Paper className={styles.paper} elevation={15}>
+                <Box className={styles.textbox}>
+    
                     <h3 className={styles.headerfordescription}><center>A Learning Experience</center></h3>
                     <div className={styles.maintext}>
                         <center>Throughout the project, I had learned a lot about managing time and making sure to stay organized. One part of staying organized that was very critical for our project was constantly communicating with the team, as well as communicating with our client. We made sure to communicate with our client every 2 weeks to update them where we were and keep them in the loop. As for the team, we would make sure to meet every week and make sure that we were all on task and able to get our parts done in a timely manner.
@@ -91,8 +91,8 @@ export default function LMS() {
                             <br /><br />I also learned the importance of making sure to make everyone on the team feel included and working efficiently with people that I had just met. At least 3 of the 7 team members I had never spoken with before our project, but having clear and focused communication made it a lot more easy to work with them. Though one thing that I also learned from the experience is dealing with group members who may cause issues and being able to overcome those issues in order to finish the project.
                         </center>
                     </div>
-                </Paper>
-                    
+                </Box>
+
                 
 
                 <br />
