@@ -157,7 +157,8 @@
     margin: 0 auto;
     border-radius: 10px;
     border: 1px dashed #ffffff;
-    flex-grow: 1;
+    flex-wrap: wrap;
+    display: wrap;
 }
 
 .photo {

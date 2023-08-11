@@ -35,6 +35,7 @@ export default function CapybaraCrush() {
                 </Box>
                 <br />
                 <br />
+                <Box className={styles.seperatorline}></Box>
 
 
                 <Box className={styles.textbox}>
