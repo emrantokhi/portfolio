@@ -35,7 +35,6 @@ export default function CapybaraCrush() {
                 </Box>
                 <br />
                 <br />
-                <Box className={styles.seperatorline}></Box>
 
 
                 <Box className={styles.textbox}>
@@ -56,7 +55,6 @@ export default function CapybaraCrush() {
                 <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/sj-xW4pRhhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"} sx={{ aspectRatio: "16/9", }} ></CardMedia>
                 <br />
                 <br />
-                <Box className={styles.seperatorline}></Box>
                 <br />
 
 
@@ -82,7 +80,6 @@ export default function CapybaraCrush() {
                     </Box>
                 </div>
                 <br />
-                <Box className={styles.seperatorline}></Box>
                 <br />
 
 
@@ -116,7 +113,6 @@ export default function CapybaraCrush() {
                     </Box>
                 </div>
                 <br />
-                <Box className={styles.seperatorline}></Box>
                 <br />
 
                 <Box className={styles.textbox}>
