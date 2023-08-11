@@ -24,7 +24,7 @@ export default function LMS() {
                 </h1>
 
                 <Box className={styles.textbox}>
-                    <Paper className={styles.paper} elevation={15}>
+                    <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
                         <div className={styles.maintext}>
                             <center>I had worked on an 8 person team to help develop a Learning Management System
                             for our client, a professor at CSU Sacramento. The basis of the project was to
@@ -40,7 +40,7 @@ export default function LMS() {
                         <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/B-cLbAW6eBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9",}}></CardMedia>
                     </Box>
                     <div className={styles.basictext}>
-                        <Paper className={styles.paper} elevation={15}>
+                        <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
                             <h3 className={styles.headerfordescription}><center>My Role on the Team</center></h3>
                             <div className={styles.maintext}>
                                 <center>My role on the team was to work on both the front-end and testing. I worked on bringing functionality to the website through the backend, and connecting it to the front-end side using Express.js. For the front-end, I created webpages in JavaScript using the React library as shown in the video.
@@ -53,7 +53,7 @@ export default function LMS() {
 
                 <Box className={styles.textbox}>
                     <div className={styles.basictext}>
-                        <Paper className={styles.paper} elevation={15}>
+                        <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
                             <h3 className={styles.headerfordescription}><center>Technologies Used</center></h3>
                             <div className={styles.maintext}>
                                 <center>As a base to build upon, we, as a team, decided to use the MERN stack, which includes MongoDB for the database, Express.js for the web framework, React.js for the client side, and Node.js for the web server. The team was also able to implement OCR (Optical Character Recognition) using the Tesseract.js API, where it could read words from an image, and allow the user to import tests/homework more easily. We used Postman for server testing. The product was deployed onto our client's Redhat Linux server.
@@ -69,7 +69,7 @@ export default function LMS() {
                 <br />
                 <Box className={styles.textbox}>
                     <div className={styles.basictext}>
-                        <Paper className={styles.paper} elevation={15}>
+                        <Paper className={styles.paper} sx={{ backgroundColor: "#131518"}} elevation={15}>
                             <h3 className={styles.headerfordescription}><center>A Learning Experience</center></h3>
                             <div className={styles.maintext}>
                                 <center>Throughout the project, I had learned a lot about managing time and making sure to stay organized. One part of staying organized that was very critical for our project was constantly communicating with the team, as well as communicating with our client. We made sure to communicate with our client every 2 weeks to update them where we were and keep them in the loop. As for the team, we would make sure to meet every week and make sure that we were all on task and able to get our parts done in a timely manner.
@@ -80,25 +80,6 @@ export default function LMS() {
                         </Paper>
                     </div>
                 </Box>
-
-               
-                
-                <Paper className={styles.paper} elevation={15}>
-                    <Box className={styles.textbox}>
-                    <h3 className={styles.headerfordescription}><center>A Learning Experience</center></h3>
-                    <div className={styles.maintext}>
-                        <center>Throughout the project, I had learned a lot about managing time and making sure to stay organized. One part of staying organized that was very critical for our project was constantly communicating with the team, as well as communicating with our client. We made sure to communicate with our client every 2 weeks to update them where we were and keep them in the loop. As for the team, we would make sure to meet every week and make sure that we were all on task and able to get our parts done in a timely manner.
-                            <br /><br />I also had to make sure to learn and understand a completely new language and framework in a very quick manner, and utilize that to create a product. I was able to learn JavaScript in a short period of time and use that knowledge to help contribute to the team.
-                            <br /><br />I also learned the importance of making sure to make everyone on the team feel included and working efficiently with people that I had just met. At least 3 of the 7 team members I had never spoken with before our project, but having clear and focused communication made it a lot more easy to work with them. Though one thing that I also learned from the experience is dealing with group members who may cause issues and being able to overcome those issues in order to finish the project.
-                        </center>
-                    </div>
-                    </Box>
-                </Paper>
-
-                
-
-                
-
                 <br />
                 <br />
                 <br />
