@@ -1,14 +1,46 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Container from '@mui/material/Container';
+import React, { useState, useCallback } from 'react';
 import Box from '@mui/material/Box';
 import Head from 'next/head';
 import styles from '../../styles/Home.module.css';
 import Unreal5Tabs from '../../components/unreal5tabs';
 import Paper from '@mui/material/Paper';
 import CardMedia from '@mui/material/CardMedia';
+import ImageViewer from 'react-simple-image-viewer';
+
+
+
+var classes = {
+    photo: {
+        margin: "2px auto",
+        paddingLeft: "6px",
+        maxWidth: "100%",
+        maxHeight: "100%",
+        objectFit: "cover",
+        alignItems: "center",
+        cursor: "pointer",
+    }
+};
 
 export default function CleanEmUp() {
+    const [currentImage, setCurrentImage] = useState(0);
+    const [isViewerOpen, setIsViewerOpen] = useState(false);
+
+    const cleanemupImages = [
+        'https://i.imgur.com/iMyLqW8.png',
+    ];
+
+    const openImageViewer = useCallback((index) => {
+        setCurrentImage(index);
+        setIsViewerOpen(true);
+    }, []);
+
+    const closeImageViewer = () => {
+        setCurrentImage(0);
+        setIsViewerOpen(false);
+    };
+
     return (
         <div className={styles.container}>
             <Head>
@@ -76,11 +108,32 @@ export default function CleanEmUp() {
 
                 <div className={styles.newgrid}>
                     <Box className={styles.textbox} sx={{ flexGrow: 1, paddingRight: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/53x13wPIC6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
+                        <CardMedia component="iframe" src="https://www.youtube.com/embed/MACOQMv-uGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
                     </Box>
-                    <Box className={styles.textbox} sx={{ flexGrow: 1, paddingLeft: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/3rOcuvCB3A8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
-                    </Box>
+                    <div>
+                        {cleanemupImages.map((src, index) => (
+                            <img
+                                src={src}
+                                onClick={() => openImageViewer(index)}
+                                width="400"
+                                height="320"
+                                key={index}
+                                style={classes.photo}
+                                alt=""
+                            />
+                        ))}
+
+                        {isViewerOpen && (
+                            <ImageViewer
+                                src={blackjackImages}
+                                currentIndex={currentImage}
+                                disableScroll={false}
+                                closeOnClickOutside={true}
+                                onClose={closeImageViewer}
+                            />
+                        )}
+                    </div>
+
                 </div>
                 <br />
                 <Box className={styles.seperatorline}></Box>
@@ -89,11 +142,12 @@ export default function CleanEmUp() {
 
                 <Box className={styles.textbox}>
                     <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
-                        <h3 className={styles.headerfordescription}><center>Update 2: Basic Enviroments and Characters</center></h3>
+                        <h3 className={styles.headerfordescription}><center>Update 1: Characters, Animation, and Guns</center></h3>
                         <div className={styles.maintext}>
-                            <center>After making the character and the animations, I had gone in and created the animation blueprint along with the character blueprints. For the animation blueprint, I'm using a State Machine which will transition to other animations based on values produced by the character. The character is C++ based, with a parent class CapybaraCrushCharacter that all characters will inherit. I also made some basic environments to test some things with and to get a feel of how I want the environments to be based on the locations I've set in the story.
-                                <br /><br />Had to remake the skeleton here for easier animation making after viewing another tutorial for it!
-                                <br />NOTE: Most objects like the rocks were obtained from the Unreal Marketplace, the lava texture I had made myself.
+                            <center>For my first update, I have added in animations for walking and running using a blend space, where the animation will change from idle, to walking, to running in a smooth action. These were done in Unreal Engine's Blueprints. I was also able to add in a player death animation, that plays when a character's HP, whether an enemy or the player character, hits 0. 
+                                <br /><br />I was able to add player input, to allow for the player to move, jump, shoot, and turn the camera and the character with the mouse, as well as gamepad support.
+                                <br /><br />And finally, I was able to add in a gun, which uses a line trace starting from the player's camera to determine what object was hit by the bullet when the gun shoots. The gun was put into the characters hands via a socket on the character model's skeleton. I was also able to add particle effects for the gun's muzzle, and for where the bullet lands. The next update will include AI handling. 
+                                <br /><br />The maps, models, and particles are from Epic Games' canceled Paragon game, not created by me, just being used for the purposes of learning and making a game.
                             </center>
                         </div>
                     </Paper>
@@ -101,45 +155,8 @@ export default function CleanEmUp() {
 
                 <div className={styles.newgrid}>
                     <Box className={styles.textbox} sx={{ flexGrow: 1, paddingRight: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/yVjAYPbn1WM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
-                    </Box>
-                    <Box className={styles.textbox} sx={{ flexGrow: 1, paddingLeft: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/DZhCbAtR868" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
-                    </Box>
-                </div>
-
-                <div className={styles.newgrid}>
-                    <Box className={styles.textbox} sx={{ flexGrow: 1, paddingRight: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/N-SD6GAGPk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
-                    </Box>
-                    <Box className={styles.textbox} sx={{ flexGrow: 1, paddingLeft: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/Vx0Xk_T7lwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
-                    </Box>
-                </div>
-                <br />
-                <Box className={styles.seperatorline}></Box>
-                <br />
-
-                <Box className={styles.textbox}>
-                    <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
-                        <h3 className={styles.headerfordescription}><center>Start: Creating the character</center></h3>
-                        <div className={styles.maintext}>
-                            <center>To start, I wanted to make a main character for players to control. I went with the idea of a capybara and the story will be based around a group of 3 capybara, 2 fighting for the love of another, in a bit of a comedic, but heartfelt manner. There are other things planned to supplement the story like combat, minigames, and side missions. But to start, I have had a little bit of experience with making things in Blender, so I started there. I used a reference to shape the model around and a followed a video tutorial with my character model. I think rigged it with a skeleton (which I had to redo after a while) and created some animations for it. I'm still not done with all the animations, and I'm creating them as I need them.
-                                <br /><br />**An important thing to note is that I am not much of an artist, more of a programmer/engineer! But it's really fun to learn about other parts of creating a game!**
-                            </center>
-                        </div>
-                    </Paper>
-                </Box>
-                <div className={styles.newgrid}>
-                    <Box className={styles.textbox} sx={{ flexGrow: 1, paddingRight: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/lOQ-EGr24mc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
-                    </Box>
-                    <Box className={styles.textbox} sx={{ flexGrow: 1, paddingLeft: "10px", paddingRight: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/H-oJGLWP9iI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
-                    </Box>
-                    <Box className={styles.textbox} sx={{ flexGrow: 1, paddingLeft: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/Ug9AMIB3Drk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
-                    </Box>
+                        <CardMedia component="iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
+                    </Box>   
                 </div>
                 <br />
                 <br />
