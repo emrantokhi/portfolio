@@ -2,19 +2,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Unreal5Tabs from '../components/unreal5tabs.js';
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
 
-const PaperBG = styled(Paper)(() => ({
-    minWidth: "50px",
-    maxWidth: "1024px",
-    textAlign: 'center',
-    backgroundColor: "#131518",
-    paddingBottom: "5px",
-    flexWrap: "wrap",
-    display: "wrap",
-    borderRadius: "10px",
-}));
 
 export default function Unreal5() {
     return (

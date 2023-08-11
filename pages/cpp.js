@@ -1,9 +1,14 @@
 import Head from 'next/head';
+import React, { useState, useCallback } from 'react';
 import styles from '../styles/Home.module.css';
 import CppTabs from '../components/cpptabs.js';
-import CardMedia from '@mui/material/CardMedia';
+import PetAlbum from '../components/photoalbum/petcaretakerpics.js';
+import TicAlbum from '../components/photoalbum/tictactoepics.js';
+import BlackjackAlbum from '../components/photoalbum/blackjackpics.js';
+
 
 export default function CPP() {
+
     return (
         <div className={styles.container}>
             <Head>
@@ -16,20 +21,26 @@ export default function CPP() {
             <p />
             <CppTabs></CppTabs>
             <main>
-                
-
+               
                 <div className={styles.newgrid}>
                     <div className={styles.maintext}>
                         <center>
                             This is a page that shows the current update of all the projects under this section! Feel free to click on the tabs above to see more specific info about the projects!
                         </center>
                     </div>
-                    <h3 className={styles.description}>Toon Tanks</h3>
-                    <CardMedia component="iframe" src="https://www.youtube.com/embed/VGjgU8JOm4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"} sx={{ aspectRatio: "16/9", }} ></CardMedia>
-                    <h3 className={styles.description}>Escape Game</h3>
-                    <CardMedia component="iframe" src="https://www.youtube.com/embed/TexDWc22aa0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
-                    <h3 className={styles.description}>Bulls and Cows</h3>
-                    <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/tOWVS4LwDO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
+
+
+                    <h3 className={styles.description}>Pet Caretaker</h3>
+                    <PetAlbum></PetAlbum>
+
+
+                    <h3 className={styles.description}>Tic-Tac-Toe</h3>
+                    <TicAlbum></TicAlbum>
+
+                    <h3 className={styles.description}>Blackjack</h3>
+                    <BlackjackAlbum></BlackjackAlbum>
+
+
                 </div>
             </main>
         </div>

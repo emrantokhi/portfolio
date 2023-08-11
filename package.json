@@ -1,26 +1,23 @@
 {
-  "homepage": "https://emrantokhi.github.io/portfolio",
+  "homepage": "https://www.emrantokhi.com",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "npm run build && gh-pages -d out"
+    "deploy": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.3",
-    "gh-pages": "^5.0.0",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-iframe": "^1.8.5",
-    "react-router-dom": "^6.14.2",
     "react-scroll-to-top": "^3.0.0",
-    "react-youtube": "^10.1.0",
+    "react-simple-image-viewer": "^1.2.2",
     "sharp": "^0.32.4"
   }
 }

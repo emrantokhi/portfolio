@@ -2,26 +2,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import HeadShot from '/public/headshot.webp'
+import HeadShot from '/public/headshot.webp';
 
 var classes = {
-    logo: {
-        margin: 'auto',
-        textAlign: 'center',
-        maxWidth: '50%',
-        maxHeight: '70%',
+    photo: {
+        margin: "auto",
+        textAlign: "center",
+        display:"flex",
+        flexWrap:"wrap",
+        maxWidth: "100%",
+        maxHeight: "100%",
+        objectFit: "cover",
     }
 };
-
-const LogoComponent = () => (
-    <Image
-        src={HeadShot}
-        height={518}
-        width={460}
-        alt="Logo"
-        className={classes.logo}
-    />
-);
 
 export default function Home() {
     return (
@@ -36,10 +29,12 @@ export default function Home() {
                     Feel free to click on any page to see more information about each project!
                     <br />Currently Working on: <Link href="/unreal5/capybaracrush">Capybara Crush</Link>
                 </p></h3>
-                <h1 className={styles.title}>
-                    <p></p>
-                    <LogoComponent />
-                </h1>
+ 
+                <Image
+                    src={HeadShot}
+                    alt="Headshot"
+                    style={classes.photo}
+                />
 
                 <div className={styles.grid}>
                     <div className={styles.card}>

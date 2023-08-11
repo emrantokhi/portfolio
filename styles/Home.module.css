@@ -131,6 +131,36 @@
   height: 1em;
 }
 
+.paper {
+    min-width: 50px;
+    max-width: 1024px;
+    text-align: center;
+    background-color: #131518;
+    padding-bottom: 5px;
+    flex-wrap: wrap;
+    display: wrap;
+    border-radius: 10px;
+}
+
+.textbox {
+    min-width: 50px;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: wrap;
+    flex-wrap: wrap;
+}
+
+.photo {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
