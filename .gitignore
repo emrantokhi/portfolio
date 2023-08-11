@@ -19,6 +19,11 @@
 .DS_Store
 .env*
 
+# photos
+/public/blackjack/
+/public/tic/
+/public/pet/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
