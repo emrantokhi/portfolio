@@ -70,7 +70,7 @@ export default function EscapeGame() {
                 <br />
                 <br />
                 <Box className={styles.textbox} sx={{ flexGrow: 1, paddingLeft: "10px" }}>
-                    <CardMedia component="iframe" src="https://www.youtube.com/embed/3rOcuvCB3A8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
+                    <CardMedia component="iframe" src="https://www.youtube.com/embed/m7nxyON3A6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
                 </Box>
                
                 <br />

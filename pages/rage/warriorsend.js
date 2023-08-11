@@ -1,12 +1,24 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Head from 'next/head';
 import styles from '../../styles/Home.module.css';
 import RageTabs from '../../components/ragetabs.js';
 import Paper from '@mui/material/Paper';
 import CardMedia from '@mui/material/CardMedia';
+import Image from 'next/image';
+import NetworkPic from '/public/warriorsend/warriorsend.webp'
+
+var classes = {
+    photo: {
+        margin: "auto",
+        textAlign: "center",
+        display: "flex",
+        flexWrap: "wrap",
+        maxWidth: "100%",
+        maxHeight: "100%",
+        objectFit: "cover",
+    }
+};
+
 
 export default function WarriorsEnd() {
     return (
@@ -75,6 +87,13 @@ export default function WarriorsEnd() {
                         </div>
                     </Paper>
                 </Box>
+                <br />
+                <br />
+                <Image
+                    src={NetworkPic}
+                    alt="Networking"
+                    style={classes.photo}
+                />
                 <br />
                 <br />
                 <br />

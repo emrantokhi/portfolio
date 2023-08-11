@@ -72,7 +72,7 @@ export default function CryptRaider() {
 
                 <div className={styles.newgrid}>
                     <Box className={styles.textbox} sx={{ flexGrow: 1, paddingRight: "10px" }}>
-                        <CardMedia component="iframe" src="https://www.youtube.com/embed/53x13wPIC6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
+                        <CardMedia component="iframe" src="https://www.youtube.com/embed/PX_7iTkq5wQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
                     </Box>
                 </div>
                 <br />
