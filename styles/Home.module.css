@@ -151,6 +151,15 @@
     flex-wrap: wrap;
 }
 
+.seperatorline {
+    min-width: 50px;
+    max-width: 720px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px dashed #ffffff;
+    flex-grow: 1;
+}
+
 .photo {
     margin: auto;
     text-align: center;
