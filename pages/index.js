@@ -64,6 +64,16 @@ export default function Home() {
                         </p>
                     </div>
 
+                    <div className={styles.card}>
+                        <h3><center>This Site</center></h3>
+                        <p>I created this site with the use of React, NextJS, and Material UI! Just want to shout out some of the packages that I was able to use to make this site cool!
+                            <br /><br />The MaterialUI tutorial sites were a great help in making this site happen, and not to mention Vercel, which this site is being hosted on! Give them a check out by clicking their logo in the footer.
+                            <br /><br />HermanNygaard's <Link className={styles.link} href="https://github.com/HermanNygaard/react-scroll-to-top">React scroll to top!</Link>
+                            <br /><br />specter256's <Link className={styles.link} href="https://github.com/specter256/react-simple-image-viewer">React Simple Image Viewer!</Link>
+                            <br /><br /><Link className={styles.link} href="https://nextjs.org/">NextJS</Link> and <Link className={styles.link} href="https://mui.com/">MaterialUI!</Link>
+                        </p>
+                    </div>
+
                 </div>
             </main>
 
