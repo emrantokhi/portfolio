@@ -29,7 +29,7 @@ export default function ToonTanks() {
                 <Box className={styles.textbox}>
                     <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
                         <div className={styles.maintext}>
-                            <center>Working as a solo indie developer, I am using Unreal Engine 5 to create a single player, story based game based on the animal known as a capybara!</center>
+                            <center>Toon Tanks is a basic game where you play as a tank and shoot down enemy turrets in a winter base!</center>
                         </div>
                     </Paper>
                 </Box>

@@ -51,7 +51,7 @@ export default function CryptRaider() {
                 <br />
                 <br />
 
-                <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/sj-xW4pRhhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"} sx={{ aspectRatio: "16/9", }} ></CardMedia>
+                <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/KnQo0XyA_0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" sx={{ aspectRatio: "16/9", }}></CardMedia>
                 <br />
                 <br />
                 <Box className={styles.seperatorline}></Box>

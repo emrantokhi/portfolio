@@ -51,12 +51,12 @@ export default function TicTacToe() {
                 <br />
                 <div className={styles.newgrid}>
                     <TicAlbum></TicAlbum>
-
                 </div>
                 <br />
                 <br />
                 <br />
             </main>
         </div>
+
     );
 }
