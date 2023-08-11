@@ -27,7 +27,7 @@ export default function Home() {
                 <p></p>
                 <h3><p className={styles.description}>
                     Feel free to click on any page to see more information about each project!
-                    <br />Currently Working on: <Link href="/unreal5/capybaracrush">Capybara Crush</Link>
+                    <br />Currently Working on: <Link className={styles.link} href="/unreal5/capybaracrush">Capybara Crush</Link>
                 </p></h3>
  
                 <Image
@@ -60,7 +60,7 @@ export default function Home() {
                         <h3><center>Interests</center></h3>
                         <p>I have a deep interest in Video Game development, and believe that I would be a great fit in any team that would have me. I strive to continue my learning journey, and want to help create new ways of looking at the world through video games.
                             <br /><br />I feel that I work very well on a team, and I try to make sure that I stay on top of my work especially when working with a team. I am able to work alone efficiently as well, and can learn new things quickly if necessary.
-                            <br /><br />GitHub: <a href="https://github.com/emrantokhi">https://github.com/emrantokhi</a>
+                            <br /><br />GitHub: <Link className={styles.link} href="https://github.com/emrantokhi">https://github.com/emrantokhi</Link>
                         </p>
                     </div>
 

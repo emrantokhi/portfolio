@@ -131,6 +131,10 @@
   height: 1em;
 }
 
+.link {
+    color: #99ccff;
+}
+
 .paper {
     min-width: 50px;
     max-width: 1024px;
