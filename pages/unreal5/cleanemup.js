@@ -28,7 +28,7 @@ export default function CleanEmUp() {
     const [isViewerOpen, setIsViewerOpen] = useState(false);
 
     const cleanemupImages = [
-        'https://i.imgur.com/iMyLqW8.png',
+        'https://i.imgur.com/iMyLqW8.png'
     ];
 
     const openImageViewer = useCallback((index) => {
@@ -125,7 +125,7 @@ export default function CleanEmUp() {
 
                         {isViewerOpen && (
                             <ImageViewer
-                                src={blackjackImages}
+                                src={cleanemupImages}
                                 currentIndex={currentImage}
                                 disableScroll={false}
                                 closeOnClickOutside={true}
