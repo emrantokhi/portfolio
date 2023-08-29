@@ -29,7 +29,7 @@ export default function CapybaraCrush() {
                 <Box className={styles.textbox}>
                     <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
                         <div className={styles.maintext}>
-                            <center>Working as a solo indie developer, I am using Unreal Engine 5 to create a single player, story based game based on the animal known as a capybara!</center>
+                            <center>Working as a solo indie developer, I am using Unreal Engine 5 to create a single player, story based game based on the animal known as a capybara! I'm using this site as a retrospective for each update, so feel free to read on or watch the included videos!</center>
                         </div>
                     </Paper>
                 </Box>
@@ -37,10 +37,30 @@ export default function CapybaraCrush() {
                 <br />
                 <Box className={styles.seperatorline}></Box>
 
+                <Box className={styles.textbox}>
+                    <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
+                        <h3 className={styles.headerfordescription}><center>Current Update: New Beam Visuals, Combat System, Bone IK</center></h3>
+                        <div className={styles.maintext}>
+                            <center>Hey everyone, today I'm showing off a current update of the things that I've been working on. This particular update was a bit of a hassle and a headache and a half, but we got through it and I had a ton of fun doing it. The things that I was able to include are in the video down below, but if you want a text description, this will be it.
+                            <br /><br />To start off with, I created a combo system, where there is a TArray that acts as a FIFO stack, and it keeps track of the recent input. So there are two attack buttons, left and right arm attack, and when you use a certain combination, such as left left right right, the mapped combo will trigger for it. It also gets reset when you're hit, and also when there has been a significant amount of time between inputs. I enjoyed implementing this one froms scratch and I think it's going to really help put the game together in terms of having a skill ceiling. I am going to make it so that each combo (there are three of them) has a need. For instance, a double arm stun will help break blocks.
+                            <br /><br />The next thing that I worked on that took the most time was the Bone Inverse Kinematics. So I have created the actual model and skeleton myself in Blender 3.4, and it took a while to figure out that I had to rearrange some bones. And once I figured that out, I had to actually adjust the bone structure without losing the animations that I had currently already made (which was a lot of them). In the end, I was able to keep the animations that I had made, while also allowing IK to work on the leg bones. In the video, you can see when he goes up a hill, his feet adjust to it as well, they work on stairs too, but they're still a bit finicky so it needs a bit more work, but a lot less now.
+                            <br /><br />The last major thing that I worked on was pretty much learning the entire Niagara particle system that comes in Unreal Engine. It took me about a week to really understand what I was doing with it, and because I put in the time to do so, I was able to reacreate the beam attack in the way that I actually wanted it, rather than having to rely on the Unreal Marketplace ones for it. Overall, I'm pretty happy with how the beam turned out! And you can take a look yourself in the video!
+                            </center>
+                        </div>
+                    </Paper>
+                </Box>
+                <br />
+                <br />
+
+                <CardMedia component="iframe" src="https://www.youtube-nocookie.com/embed/LcNZ_66XFiE?si=UtMUQaYn2sJ5DFC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"} sx={{ aspectRatio: "16/9", }} ></CardMedia>
+                <br />
+                <br />
+                <Box className={styles.seperatorline}></Box>
+                <br />
 
                 <Box className={styles.textbox}>
                     <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
-                        <h3 className={styles.headerfordescription}><center>Current Update: UI, Combat, Tools (with demo)</center></h3>
+                        <h3 className={styles.headerfordescription}><center>Update 4: UI, Combat, Tools (with demo)</center></h3>
                         <div className={styles.maintext}>
                             <center>In this update, I've changed the combat system a bit. I've made it so that you have elemental modes that you can switch between. The modes are normal, fire, earth, and water. Each respective element has an ability attached to it on the 1 key (which will be allowed to be changed later). They also have their own spin moves and their own ground-smashes. So in order to play, you will need to use a combination of all of your abilities.
                                 <br /><br />I may add in a combo system where your basic attacks (left and right click) gain more energy as you continue a combo. For the most part, I feel that I have combat about where I want it, minus some tweaks and balancing that will be applied later. Below will be a link to a demo that you can explore and a video that shows me playing that demo. Sound effects will be coming soon! As well as some more response to attack particles. Also keep in mind that this map is just a test map and will most likely be scrapped!
