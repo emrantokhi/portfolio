@@ -39,7 +39,28 @@ export default function CapybaraCrush() {
 
                 <Box className={styles.textbox}>
                     <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
-                        <h3 className={styles.headerfordescription}><center>Current Update: New Beam Visuals, Combat System, Bone IK</center></h3>
+                        <h3 className={styles.headerfordescription}><center>Current Update: Combat Refactor, Enemy AI, Visual, Sounds, UI, Maps, Save System, Quests, Animation Refactor, Cutscene System, Player Feedback</center></h3>
+                        <div className={styles.maintext}>
+                            <center>Hey everyone, been a minute since I've done an update here, so I thought it was about time to bring up what I've been doing. To start off with, I've been working on this game almost 3 years now, and it's a big project that I overestimated, but I'm still determined and full of energy for completing this game. However, working for 3 years on something means that the older stuff that you first started doing, might not be the most optimized way to do it. So, I went back and refactor A LOT of things, including bringing my animation blueprints to C++, saw some performance gains from the debugger in terms of cpu thread (small but everything helps, right?), and I weeded out a lot of bugs with it.
+                            <br /><br />Not only did I refactor the animation blueprints, but I've adjusted combat to something I feel is much more approachable, with left click being your main combo attack, and your right clicks costing 'tokens', but being more powerful along with it. I've also added sounds, UI, player feedback in the form of camera shakes and controller vibrations. The UI can be seen in the video below, and a lot of material work went into that one. Sound took about a week to find good sounds, credit the creators, mix them, and put them in. There's also a bunch of visual updates for the abilities, and I also added a fire sword mode! So not only does it change your stance and everything, but it gives you a real sword to slash with.
+                            <br /><br />I'm currently working on the Enemy AI now, and I'm going to add a bunch of types of enemies, and the most important touch, bosses. Quests are set up now on the backend, and I created a whole cutscene system, with text bubbles since I probably won't be able to hire voice actors (working on a small budget!).
+                            <br /><br />The video below shows all the visual updates, but didn't capture things with the enemy AI as it's deep in progress, and some of the abilities weren't shown, but you'll get the basic gist of what's been worked on here! Current code count has gone up to around 6000+ lines too, so learning to manage that is also turning into a treat. Stay tuned for more updates!
+                            </center>
+                        </div>
+                    </Paper>
+                </Box>
+                <br />
+                <br />
+
+                <CardMedia component="iframe" src="https://www.youtube.com/embed/odhrKVe6qb8?si=ZpfCsp0u9VKEyqpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"} sx={{ aspectRatio: "16/9", }} ></CardMedia>
+                <br />
+                <br />
+                <Box className={styles.seperatorline}></Box>
+                <br />
+
+                <Box className={styles.textbox}>
+                    <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
+                        <h3 className={styles.headerfordescription}><center>Update 5: New Beam Visuals, Combat System, Bone IK</center></h3>
                         <div className={styles.maintext}>
                             <center>Hey everyone, today I'm showing off a current update of the things that I've been working on. This particular update was a bit of a hassle and a headache and a half, but we got through it and I had a ton of fun doing it. The things that I was able to include are in the video down below, but if you want a text description, this will be it.
                             <br /><br />To start off with, I created a combo system, where there is a TArray that acts as a FIFO stack, and it keeps track of the recent input. So there are two attack buttons, left and right arm attack, and when you use a certain combination, such as left left right right, the mapped combo will trigger for it. It also gets reset when you're hit, and also when there has been a significant amount of time between inputs. I enjoyed implementing this one froms scratch and I think it's going to really help put the game together in terms of having a skill ceiling. I am going to make it so that each combo (there are three of them) has a need. For instance, a double arm stun will help break blocks.
