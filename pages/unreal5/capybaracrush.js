@@ -39,7 +39,26 @@ export default function CapybaraCrush() {
 
                 <Box className={styles.textbox}>
                     <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
-                        <h3 className={styles.headerfordescription}><center>Current Update: Combat Refactor, Enemy AI, Visual, Sounds, UI, Maps, Save System, Quests, Animation Refactor, Cutscene System, Player Feedback</center></h3>
+                        <h3 className={styles.headerfordescription}><center>Update 7: First Boss</center></h3>
+                        <div className={styles.maintext}>
+                            <center>Hey everyone, today's a special day, today we have refactored a good amount of combat, and finished setting up the first basic enemies and the first boss. All through C++ coding and the Unreal Engine behavior tree (which I have found to be quite versatile, kind of hard to try and debug I have found though). I planned out a full boss sequence, just in combat, without the cutscenes and the updated models, and I think it came out pretty fun! I had some play testers play it, and I came to teh realization that I have had about 1000+ hours playing my game at that point, and I had made it a bit hard! 
+                            <br /><br />What you see below is my 1000+ hours of gameplay, but even so, when I had them playtest it, they had done things that I would have never expected anyone to do! That was one of the most satisfying things watching the playtesters play through my game. But, you can watch through and see the boss AI! I kept the first boss quite simple, especially since it is the first boss in the entire game, I wanted to make sure it was a we're going to get used to things kinda boss.
+                            </center>
+                        </div>
+                    </Paper>
+                </Box>
+                <br />
+                <br />
+
+                <CardMedia component="iframe" src="https://www.youtube.com/embed/cZH6ZTDc04w?si=bmvXkeRgfspMhMhV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen={"true"} sx={{ aspectRatio: "16/9", }} ></CardMedia>
+                <br />
+                <br />
+                <Box className={styles.seperatorline}></Box>
+                <br />
+
+                <Box className={styles.textbox}>
+                    <Paper className={styles.paper} sx={{ backgroundColor: "#131518" }} elevation={15}>
+                        <h3 className={styles.headerfordescription}><center>Update 6: Combat Refactor, Enemy AI, Visual, Sounds, UI, Maps, Save System, Quests, Animation Refactor, Cutscene System, Player Feedback</center></h3>
                         <div className={styles.maintext}>
                             <center>Hey everyone, been a minute since I've done an update here, so I thought it was about time to bring up what I've been doing. To start off with, I've been working on this game almost 3 years now, and it's a big project that I overestimated, but I'm still determined and full of energy for completing this game. However, working for 3 years on something means that the older stuff that you first started doing, might not be the most optimized way to do it. So, I went back and refactor A LOT of things, including bringing my animation blueprints to C++, saw some performance gains from the debugger in terms of cpu thread (small but everything helps, right?), and I weeded out a lot of bugs with it.
                             <br /><br />Not only did I refactor the animation blueprints, but I've adjusted combat to something I feel is much more approachable, with left click being your main combo attack, and your right clicks costing 'tokens', but being more powerful along with it. I've also added sounds, UI, player feedback in the form of camera shakes and controller vibrations. The UI can be seen in the video below, and a lot of material work went into that one. Sound took about a week to find good sounds, credit the creators, mix them, and put them in. There's also a bunch of visual updates for the abilities, and I also added a fire sword mode! So not only does it change your stance and everything, but it gives you a real sword to slash with.
